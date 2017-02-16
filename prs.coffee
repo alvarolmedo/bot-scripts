@@ -34,7 +34,7 @@ getprs = (msg, repo) ->
         text = "#{text}-> No hay PRs"
       else
         for pr in body
-          text = "#{text}-> PR #{pr.number} - #{pr.title}:\n   #{pr.url} por #{pr.user.login}\n"
+          text = "#{text}-> PR #{pr.number} - #{pr.title}:\n   #{pr.html_url} por #{pr.user.login}\n"
       msg.send text
 
 module.exports = (robot) ->
